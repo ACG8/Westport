@@ -16,96 +16,32 @@ Platform assembly: C:\Users\Ananda\Documents\Westport\Westport_Data\Managed\Unit
 Loading C:\Users\Ananda\Documents\Westport\Westport_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Ananda\Documents\Westport\Westport_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Ananda\Documents\Westport\Westport_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.078 seconds
+- Completed reload, in  0.056 seconds
 Platform assembly: C:\Users\Ananda\Documents\Westport\Westport_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Ananda\Documents\Westport\Westport_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.838590 ms
+UnloadTime: 0.924972 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.171806 ms
+UnloadTime: 5.191047 ms
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 344.
-Total: 0.264705 ms (FindLiveObjects: 0.047039 ms CreateObjectMapping: 0.038914 ms MarkObjects: 0.171481 ms  DeleteObjects: 0.006842 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 346.
+Total: 0.293784 ms (FindLiveObjects: 0.063289 ms CreateObjectMapping: 0.036776 ms MarkObjects: 0.184310 ms  DeleteObjects: 0.008125 ms)
 
-entered
+Joystick connected ("Controller (Xbox 360 Wireless Receiver for Windows)").
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-used building action
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-used building action
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-used building action
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-used building action
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-used building action
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-used building action
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-used building action
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-entered
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+(Filename:  Line: 1353)
 
 Joystick disconnected ("Controller (Xbox 360 Wireless Receiver for Windows)").
  
-(Filename:  Line: 714)
+(Filename:  Line: 1260)
 
 Joystick disconnected ("Controller (Xbox 360 Wireless Receiver for Windows)").
  
 (Filename:  Line: 1260)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3bdc -> priority: 1 
-  Thread -> id: 57e8 -> priority: 1 
+  Thread -> id: 91c -> priority: 1 
+  Thread -> id: 3d98 -> priority: 1 

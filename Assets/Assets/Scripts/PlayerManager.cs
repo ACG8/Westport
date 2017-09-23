@@ -15,16 +15,16 @@ public class PlayerManager : MonoBehaviour {
 	public GameObject joinBox;
 
 	// The object representing the player in the game
-	private GameObject avatar;
+	public GameObject avatar;
 
 	// Use this for initialization
 	void Start () {
-		// set the avatar
-		foreach (Transform child in transform)
-			if (child.CompareTag ("Avatar")) {
-				avatar = child;
-				break;
-			}
+//		// set the avatar
+//		foreach (Transform child in transform)
+//			if (child.CompareTag ("Avatar")) {
+//				avatar = child.GetComponent<GameObject> ();
+//				break;
+//			}
 	}
 
 
@@ -60,7 +60,7 @@ public class PlayerManager : MonoBehaviour {
 		if (playing) {
 			
 		} else {
-			Destroy (avatar);
+			Destroy (this);
 		}
 	}
 

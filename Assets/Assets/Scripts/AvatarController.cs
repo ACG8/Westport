@@ -2,36 +2,26 @@
 using System.Collections;
 
 
-// Script on the player that handles controls
-public class PlayerController : MonoBehaviour {
-	
+// Script on the avatar that handles movement and updates
+public class AvatarController : MonoBehaviour {
+
 	public int p = 1;
 
 	private BuildingManager insideBuilding;
 	private BuildingManager nearbyBuilding;
 
-	private GameObject avatar;
-	//private string HORIZONTAL = "Horizontal_P" + PlayerNumber;
-
 	public float speed = 5f;
 	// Use this for initialization
-	void Start () {
-		// set the avatar
-		foreach (Transform child in transform)
-			if (child.CompareTag ("Avatar")) {
-				avatar = child;
-				break;
-			}
-	}
-	
+	void Start () {}
+
 	// Update is called once per frame
 	void Update () {
 
 		// if outside of building, use outside controls
 		if (insideBuilding == null) {
-			
+
 			// change velocity based on joystick
-			avatar.transform.GetComponent<Rigidbody2D> ().velocity = InputManager.Joystick (p) * speed;
+			transform.GetComponent<Rigidbody2D> ().velocity = InputManager.Joystick (p) * speed;
 
 			// if there is a building nearby, enter it when action button is pressed
 			if (InputManager.AButton (p) && nearbyBuilding != null)
@@ -52,7 +42,6 @@ public class PlayerController : MonoBehaviour {
 
 	// handle entering a building
 	void OnTriggerEnter2D(Collider2D other) {
-		print ("entered");
 		if (other.GetComponent<BuildingManager> () != null)
 			nearbyBuilding = other.GetComponent<BuildingManager>();
 	}
@@ -62,4 +51,5 @@ public class PlayerController : MonoBehaviour {
 		if (other.GetComponent<BuildingManager> () != null)
 			nearbyBuilding = null;
 	}
+		
 }
