@@ -54,6 +54,6 @@ public class SelectionMenuManager : MonoBehaviour {
 		inventoryPanels.GetComponent<Canvas> ().enabled = true;
 		InputManager.gameStarted = true;
 		GetComponent<Canvas> ().enabled = false;
-		Destroy (GetComponent<GameObject> ());
+		enabled = false;
 	}
 }
