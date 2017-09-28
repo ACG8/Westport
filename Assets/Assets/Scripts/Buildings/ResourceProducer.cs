@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 // A building that produces a single resource (like a fishery)
 public class ResourceProducer : BuildingManager {
+
+	public Text offerText;
 
 	// times per minute that resource is generated
 	public int frequency;
@@ -31,6 +34,7 @@ public class ResourceProducer : BuildingManager {
 			int[] amounts = { -bulkPrice, offer };
 			inventory.Trade (goods, amounts);
 			offer = 0;
+			UpdateDisplay ();
 		}
 				
 	}
@@ -48,7 +52,7 @@ public class ResourceProducer : BuildingManager {
 
 	// Updates the graphical display indicating the current number of resources on offer
 	void UpdateDisplay () {
-
+		offerText.text = offer.ToString();
 	}
 
 }
