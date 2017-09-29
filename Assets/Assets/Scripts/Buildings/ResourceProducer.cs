@@ -32,9 +32,11 @@ public class ResourceProducer : BuildingManager {
 			PlayerInventory inventory = p.GetInventory ();
 			string[] goods = { "Coin", goodType };
 			int[] amounts = { -bulkPrice, offer };
-			inventory.Trade (goods, amounts);
-			offer = 0;
-			UpdateDisplay ();
+			// If the trade is successful, reset the offer
+			if (inventory.Trade (goods, amounts)) {
+				offer = 0;
+				UpdateDisplay ();
+			}
 		}
 				
 	}

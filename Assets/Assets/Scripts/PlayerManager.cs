@@ -60,7 +60,6 @@ public class PlayerManager : MonoBehaviour {
 
 			// Pressing B exits the building
 			if (InputManager.BButton (p)) {
-				print (avatar);
 				avatar.SetActive (true);
 				insideBuilding.SetOccupied (false);
 				insideBuilding = null;

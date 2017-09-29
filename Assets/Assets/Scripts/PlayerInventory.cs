@@ -44,8 +44,9 @@ public class PlayerInventory : MonoBehaviour {
 	}
 
 	// Only succeeds if sufficient resources exist
+	// returns whether or not it succeeded
 	// Order of keys and deltas must match
-	public void Trade(string[] costs, int[] deltas) {
+	public bool Trade(string[] costs, int[] deltas) {
 		// assert that the two inputs are the same length
 		Debug.Assert (costs.Length == deltas.Length, "Attempted to call trade with inputs of unequal length");
 
@@ -57,7 +58,7 @@ public class PlayerInventory : MonoBehaviour {
 				int currentAmt =  Get (costs [i]);
 				int delta = deltas [i];
 				if (currentAmt + delta < 0)
-					return;
+					return false;
 			}
 
 		// second, iterate through the transaction and update all fields
@@ -66,5 +67,6 @@ public class PlayerInventory : MonoBehaviour {
 
 		// update the panel to reflect the new resources. Note: This should be the ONLY way to change resource amounts.
 		UpdatePanel ();
+		return true;
 	}
 }
