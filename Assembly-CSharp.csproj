@@ -54,6 +54,7 @@
      <Compile Include="Assets\Assets\Scripts\AvatarController.cs" />
      <Compile Include="Assets\Assets\Scripts\Buildings\BuildingAction.cs" />
      <Compile Include="Assets\Assets\Scripts\Buildings\BuildingManager.cs" />
+     <Compile Include="Assets\Assets\Scripts\Buildings\BuildingProducer.cs" />
      <Compile Include="Assets\Assets\Scripts\Buildings\ResourceProducer.cs" />
      <Compile Include="Assets\Assets\Scripts\ConstructionFirmAction.cs" />
      <Compile Include="Assets\Assets\Scripts\InputManager.cs" />
