@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour {
 
 	// tracking the building that the player is currently ready to place
 	public GameObject buildingPlan;
+	// sprite indicating the blueprint
+	public GameObject blueprintIndicator;
 
 	// required box size of safety for building to be built
 	private float buildingCheckSize = 2f;
@@ -72,6 +74,8 @@ public class PlayerManager : MonoBehaviour {
 					if (nearbyBuildings.Length == 0) {
 						// If no building is nearby, place your planned building and get inside
 						GameObject newBuilding = Instantiate (buildingPlan, avatar.transform.position, avatar.transform.rotation);
+						buildingPlan = null;
+						blueprintIndicator.SetActive (false);
 						EnterBuilding (newBuilding.GetComponent<BuildingManager> ());
 					}
 
@@ -88,6 +92,20 @@ public class PlayerManager : MonoBehaviour {
 			if (InputManager.BButton (p)) {
 				ExitBuilding ();
 			}
+
+			if (InputManager.HAxis(p) > 0.5) {
+				insideBuilding.GetComponent<BuildingManager> ().Right (this);
+			}
+
+			if (InputManager.HAxis(p) < -0.5) {
+				insideBuilding.GetComponent<BuildingManager> ().Left (this);
+			}
 		}
+	}
+
+
+	public void SetBlueprint(GameObject blueprint) {
+		buildingPlan = blueprint;
+		blueprintIndicator.SetActive (true);
 	}
 }

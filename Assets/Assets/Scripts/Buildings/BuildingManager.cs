@@ -3,6 +3,8 @@ using System.Collections;
 
 public abstract class BuildingManager : MonoBehaviour {
 
+	public string displayText;
+
 	public float exitX = 0f;
 	public float exitY = -.4f;
 
@@ -26,4 +28,9 @@ public abstract class BuildingManager : MonoBehaviour {
 
 	public abstract void Action (PlayerManager p);
 
+	public virtual void Right(PlayerManager p) {}
+
+	public virtual void Left(PlayerManager p) {}
+
+	public virtual string GetDisplayText() { return "Generic Building"; }
 }
