@@ -15,6 +15,20 @@ public static class InputManager {
 		return val;
 	}
 
+	private static int hAxisStatus = 0;
+	public static int HAxisDown(int i) {
+		int hAxisRaw = ((int) Input.GetAxisRaw("JH" + i) + (int) Input.GetAxisRaw("KH" + i))/2;
+
+		// If the joystick was this way before, return 0
+		if (hAxisStatus == hAxisRaw && hAxisRaw != 0)
+			return 0;
+
+		// Update the last joystick position then return it
+		hAxisStatus = hAxisRaw;
+		return hAxisStatus;
+
+	}
+
 	public static float VAxis(int i) {
 		float val = 0f;
 		val += Input.GetAxis ("JV" + i);

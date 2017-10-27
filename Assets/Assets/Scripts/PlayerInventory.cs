@@ -15,6 +15,28 @@ public class PlayerInventory : MonoBehaviour {
 
 	}
 
+	// Pay for goods in list. Fails if insufficient goods.
+	public bool Pay(Good[] costs) {
+		foreach (Good g in costs) {
+			// If we do not have enough of any good, fail
+			if (Get (g.type) < g.quantity)
+				return false;
+		}
+		// Otherwise, decrement each good
+		foreach (Good g in costs) {
+			Adjust (g.type, -g.quantity);
+		}
+		UpdatePanel ();
+		return true;
+	}
+
+	public void Receive(Good[] purchase) {
+		foreach (Good g in purchase) {
+			Adjust (g.type, g.quantity);
+		}
+		UpdatePanel ();
+	}
+
 	// Updates the text in the inventory panel
 	void UpdatePanel() {
 		// search inventory panel for icons

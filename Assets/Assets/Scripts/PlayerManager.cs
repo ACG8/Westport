@@ -15,7 +15,7 @@ public class PlayerManager : MonoBehaviour {
 	private float buildingCheckSize = 2f;
 
 	// tracking the player's state with respect to buildings
-	private BuildingManager insideBuilding;
+	private AbstractBuilding insideBuilding;
 
 	// various aspects of the player
 	private AvatarController controller;
@@ -39,7 +39,7 @@ public class PlayerManager : MonoBehaviour {
 		return inventory;
 	}
 
-	void EnterBuilding(BuildingManager b) {
+	void EnterBuilding(AbstractBuilding b) {
 		avatar.SetActive (false);
 		insideBuilding = b;
 		insideBuilding.SetOccupied (true);
@@ -64,7 +64,7 @@ public class PlayerManager : MonoBehaviour {
 
 			// Pressing A enters a nearby building, if one exists
 			if (InputManager.AButton (p)) {
-				BuildingManager nearbyBuilding = controller.GetNearbyBuilding ();
+				AbstractBuilding nearbyBuilding = controller.GetNearbyBuilding ();
 				// If there is a building and it is unoccupied, enter it
 				if (!(nearbyBuilding == null || nearbyBuilding.IsOccupied())) {
 					EnterBuilding (nearbyBuilding);
@@ -74,9 +74,10 @@ public class PlayerManager : MonoBehaviour {
 					if (nearbyBuildings.Length == 0) {
 						// If no building is nearby, place your planned building and get inside
 						GameObject newBuilding = Instantiate (buildingPlan, avatar.transform.position, avatar.transform.rotation);
+						newBuilding.GetComponent<AbstractBuilding>().SetOwner (this);
 						buildingPlan = null;
 						blueprintIndicator.SetActive (false);
-						EnterBuilding (newBuilding.GetComponent<BuildingManager> ());
+						EnterBuilding (newBuilding.GetComponent<AbstractBuilding> ());
 					}
 
 				}
@@ -86,7 +87,7 @@ public class PlayerManager : MonoBehaviour {
 		} else {
 			// Pressing A calls the action of the building the player occupies
 			if (InputManager.AButton (p))
-				insideBuilding.GetComponent<BuildingManager> ().Action (this);
+				insideBuilding.GetComponent<AbstractBuilding> ().Action (this);
 
 			// Pressing B exits the building
 			if (InputManager.BButton (p)) {
@@ -94,11 +95,11 @@ public class PlayerManager : MonoBehaviour {
 			}
 
 			if (InputManager.HAxis(p) > 0.5) {
-				insideBuilding.GetComponent<BuildingManager> ().Right (this);
+				insideBuilding.GetComponent<AbstractBuilding> ().Right (this);
 			}
 
 			if (InputManager.HAxis(p) < -0.5) {
-				insideBuilding.GetComponent<BuildingManager> ().Left (this);
+				insideBuilding.GetComponent<AbstractBuilding> ().Left (this);
 			}
 		}
 	}

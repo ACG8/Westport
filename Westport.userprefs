@@ -1,18 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Assets\Scripts\Buildings\BuildingProducer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Assets\Scripts\PlayerManager.cs">
     <Files>
-      <File FileName="Assets\Assets\Scripts\AvatarController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Assets\Scripts\PlayerManager.cs" Line="107" Column="9" />
+      <File FileName="Assets\Assets\Scripts\AvatarController.cs" Line="36" Column="42" />
+      <File FileName="Assets\Assets\Scripts\PlayerManager.cs" Line="97" Column="26" />
       <File FileName="Assets\Assets\Scripts\SelectionMenuManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Assets\Scripts\PlayerInventory.cs" Line="1" Column="1" />
-      <File FileName="Assets\Assets\Scripts\ConstructionFirmAction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Assets\Scripts\InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Assets\Scripts\Buildings\AbstractBuilding.cs" Line="54" Column="5" />
+      <File FileName="Assets\Assets\Scripts\Buildings\ConstructionFirm.cs" Line="35" Column="3" />
+      <File FileName="Assets\Assets\Scripts\Buildings\Trader.cs" Line="20" Column="17" />
+      <File FileName="Assets\Assets\Scripts\PlayerInventory.cs" Line="35" Column="22" />
+      <File FileName="Assets\Assets\Scripts\InputManager.cs" Line="20" Column="85" />
       <File FileName="Assets\Assets\Scripts\MainMenuManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Assets\Scripts\Buildings\BuildingAction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Assets\Scripts\Buildings\BuildingManager.cs" Line="6" Column="9" />
-      <File FileName="Assets\Assets\Scripts\Buildings\ResourceProducer.cs" Line="28" Column="18" />
-      <File FileName="Assets\Assets\Scripts\Buildings\BuildingProducer.cs" Line="29" Column="77" />
+      <File FileName="Assets\Assets\Scripts\Good.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -7,7 +7,7 @@ public class AvatarController : MonoBehaviour {
 
 	private int p;
 
-	private BuildingManager nearbyBuilding;
+	private AbstractBuilding nearbyBuilding;
 
 	public float speed = 5f;
 
@@ -21,19 +21,19 @@ public class AvatarController : MonoBehaviour {
 	}
 
 	// returns the building nearby
-	public BuildingManager GetNearbyBuilding() {
+	public AbstractBuilding GetNearbyBuilding() {
 		return nearbyBuilding;
 	}
 
 	// detect nearby buildings
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.GetComponent<BuildingManager> () != null)
-			nearbyBuilding = other.GetComponent<BuildingManager>();
+		if (other.GetComponent<AbstractBuilding> () != null)
+			nearbyBuilding = other.GetComponent<AbstractBuilding>();
 	}
 
 	// unassign nearby buildings
 	void OnTriggerExit2D(Collider2D other) {
-		if (other.GetComponent<BuildingManager> () != null)
+		if (other.GetComponent<AbstractBuilding> () != null)
 			nearbyBuilding = null;
 	}
 		
