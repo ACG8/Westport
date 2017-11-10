@@ -1,17 +1,23 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Assets\Scripts\PlayerManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Assets\Scripts\Utilities.cs">
     <Files>
-      <File FileName="Assets\Assets\Scripts\AvatarController.cs" Line="36" Column="42" />
-      <File FileName="Assets\Assets\Scripts\PlayerManager.cs" Line="97" Column="26" />
+      <File FileName="Assets\Assets\Scripts\AvatarController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Assets\Scripts\PlayerManager.cs" Line="75" Column="78" />
       <File FileName="Assets\Assets\Scripts\SelectionMenuManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Assets\Scripts\Buildings\AbstractBuilding.cs" Line="54" Column="5" />
-      <File FileName="Assets\Assets\Scripts\Buildings\ConstructionFirm.cs" Line="35" Column="3" />
-      <File FileName="Assets\Assets\Scripts\Buildings\Trader.cs" Line="20" Column="17" />
-      <File FileName="Assets\Assets\Scripts\PlayerInventory.cs" Line="35" Column="22" />
+      <File FileName="Assets\Assets\Scripts\Buildings\AbstractBuilding.cs" Line="91" Column="52" />
+      <File FileName="Assets\Assets\Scripts\Buildings\Fortress.cs" Line="11" Column="11" />
+      <File FileName="Assets\Assets\Scripts\Buildings\ConstructionFirm.cs" Line="14" Column="22" />
+      <File FileName="Assets\Assets\Scripts\Buildings\Trader.cs" Line="15" Column="25" />
+      <File FileName="Assets\Assets\Scripts\PlayerInventory.cs" Line="1" Column="1" />
       <File FileName="Assets\Assets\Scripts\InputManager.cs" Line="20" Column="85" />
       <File FileName="Assets\Assets\Scripts\MainMenuManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Assets\Scripts\Good.cs" Line="1" Column="1" />
+      <File FileName="Assets\Assets\Scripts\Events\GoblinInvasionEvent.cs" Line="14" Column="67" />
+      <File FileName="Assets\Assets\Scripts\GoblinInvasionForce.cs" Line="27" Column="67" />
+      <File FileName="Assets\Assets\Scripts\GoblinInvasionForceAI.cs" Line="20" Column="4" />
+      <File FileName="Assets\Assets\Scripts\Events\EventManager.cs" Line="22" Column="18" />
+      <File FileName="Assets\Assets\Scripts\Utilities.cs" Line="6" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -87,3 +87,7 @@ public abstract class AbstractBuilding : MonoBehaviour {
 		UpdateCostText ();
 	}
 }
+
+// Subinterfaces so the goblins know what to attack
+public abstract class DestructibleBuilding : AbstractBuilding {}
+public abstract class IndestructibleBuilding : AbstractBuilding {}

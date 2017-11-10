@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 // Trader buildings trade one resource for another.
-public class Trader : AbstractBuilding {
+public class Trader : DestructibleBuilding {
 
 	public string buildingName;
 	public Text offerText;

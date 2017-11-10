@@ -73,11 +73,7 @@ public class PlayerManager : MonoBehaviour {
 					Collider2D[] nearbyBuildings = Physics2D.OverlapBoxAll(avatar.transform.position, new Vector2(buildingCheckSize,buildingCheckSize), 0f, LayerMask.NameToLayer("Buildings"));
 					if (nearbyBuildings.Length == 0) {
 						// If no building is nearby, place your planned building and get inside
-						GameObject newBuilding = Instantiate (buildingPlan, avatar.transform.position, avatar.transform.rotation);
-						newBuilding.GetComponent<AbstractBuilding>().SetOwner (this);
-						buildingPlan = null;
-						blueprintIndicator.SetActive (false);
-						EnterBuilding (newBuilding.GetComponent<AbstractBuilding> ());
+						ConstructBuilding();
 					}
 
 				}
@@ -104,6 +100,16 @@ public class PlayerManager : MonoBehaviour {
 		}
 	}
 
+	public void ConstructBuilding() {
+		// The new building is constructed on the grid
+		Vector2 location = Utilities.ToGrid (avatar.transform.position);
+
+		GameObject newBuilding = Instantiate (buildingPlan, location, Quaternion.identity);
+		newBuilding.GetComponent<AbstractBuilding>().SetOwner (this);
+		buildingPlan = null;
+		blueprintIndicator.SetActive (false);
+		EnterBuilding (newBuilding.GetComponent<AbstractBuilding> ());
+	}
 
 	public void SetBlueprint(GameObject blueprint) {
 		buildingPlan = blueprint;

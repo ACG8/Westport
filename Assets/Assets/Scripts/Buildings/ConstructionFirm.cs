@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ConstructionFirm : AbstractBuilding {
+public class ConstructionFirm : IndestructibleBuilding {
 
 	public Text currentBlueprintText;
 	public GameObject[] buildings;
 
 	private int index = 0;
+
+	void Start() {
+		UpdateOfferText ();
+	}
 
 	// Action selects and purchases a building
 	protected override void Effect (PlayerManager p) {

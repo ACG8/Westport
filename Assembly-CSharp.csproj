@@ -54,14 +54,20 @@
      <Compile Include="Assets\Assets\Scripts\AvatarController.cs" />
      <Compile Include="Assets\Assets\Scripts\Buildings\AbstractBuilding.cs" />
      <Compile Include="Assets\Assets\Scripts\Buildings\ConstructionFirm.cs" />
+     <Compile Include="Assets\Assets\Scripts\Buildings\Fortress.cs" />
      <Compile Include="Assets\Assets\Scripts\Buildings\Trader.cs" />
-     <Compile Include="Assets\Assets\Scripts\ConstructionFirmAction.cs" />
+     <Compile Include="Assets\Assets\Scripts\Events\AbstractEvent.cs" />
+     <Compile Include="Assets\Assets\Scripts\Events\EventManager.cs" />
+     <Compile Include="Assets\Assets\Scripts\Events\GoblinInvasionEvent.cs" />
+     <Compile Include="Assets\Assets\Scripts\GoblinInvasionForce.cs" />
+     <Compile Include="Assets\Assets\Scripts\GoblinInvasionForceAI.cs" />
      <Compile Include="Assets\Assets\Scripts\Good.cs" />
      <Compile Include="Assets\Assets\Scripts\InputManager.cs" />
      <Compile Include="Assets\Assets\Scripts\MainMenuManager.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerInventory.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerManager.cs" />
      <Compile Include="Assets\Assets\Scripts\SelectionMenuManager.cs" />
+     <Compile Include="Assets\Assets\Scripts\Utilities.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
